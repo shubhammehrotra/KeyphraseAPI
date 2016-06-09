@@ -143,6 +143,10 @@ def test(inputSentence):
     a = int(totalKeywords / 3)
     rake = Rake("SmartStoplist.txt")
     keywords = rake.run(text)
-    return str(keywords)
+    ret = []
+    for l in range(len(keywords)):
+        ret.append(keywords[l][0])
+    print (ret)
+    return str(ret)
 if __name__ == '__main__':
     app.run(debug = True)
